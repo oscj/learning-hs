@@ -31,3 +31,22 @@ removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
 -- Multiple parameters
 addThree :: Int -> Int -> Int -> Int
 addThree x y z = x + y + x
+
+-- FizzBuzz
+fizzBuzzhelper :: Int -> String
+helper n
+  | mod n 3 == 0 && mod n 5 == 0 = "FizzBuzz"
+  | mod n 3 == 0                 = "Fizz"
+  | mod n 5 == 0                 = "Buzz"
+  | otherwise                    = show n
+
+fizzBuzz :: Int -> [String]
+fizzBuzz n = map helper [1..n]
+
+-- Find the triangle that meets these conditions:
+--  1. Length of the three sides are all integers
+--  2. The length of each side is less than or equal to 10
+--  3. The triangle's perimeter is equal to 24
+
+rightTriangles :: Int -> [(Int, Int, Int)]
+rightTriangles p = [ (a,b,c) | c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a + b + c == p]

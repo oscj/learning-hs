@@ -1,7 +1,7 @@
--- Exercise solutions for List Exercises from Haskell For Imperative Programmers
+-- Exercise solutions 
+-- List Exercises from Haskell For Imperative Programmers, Video #5
 -- Link: https://www.youtube.com/watch?v=Cxkqrg8FCt8
 --
--- Oscar Jaimes
 -- July 18 2021
 
 -- 1. Create a function that returns True if an element 
